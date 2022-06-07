@@ -2,6 +2,8 @@
 
 Cool tutorial overall, helped a lot in understanding controllers and how API groups are developed in some capacity. I verified that my controller was launching:
 
+
+```
 austin@ubuntu:~/project$ make run ENABLE_WEBHOOKS=false
 GOBIN=/home/austin/project/bin go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.8.0
 /home/austin/project/bin/controller-gen rbac:roleName=manager-role crd webhook paths="./..." output:crd:artifacts:config=config/crd/bases
@@ -19,7 +21,7 @@ I0606 11:50:20.836754   95832 request.go:665] Waited for 1.040817256s due to cli
 1.6545306209930873e+09  INFO    controller.cronjob      Starting EventSource    {"reconciler group": "batch.tutorial.kubebuilder.io", "reconciler kind": "CronJob", "source": "kind source: *v1.Job"}
 1.6545306209930909e+09  INFO    controller.cronjob      Starting Controller     {"reconciler group": "batch.tutorial.kubebuilder.io", "reconciler kind": "CronJob"}
 1.6545306210960605e+09  INFO    controller.cronjob      Starting workers        {"reconciler group": "batch.tutorial.kubebuilder.io", "reconciler kind": "CronJob", "worker count": 1}
-
+```
 
 there are multiple API versions available (v1/v2) and main has been updated to accept acustom config file (config/manager/controller_manager_config.yaml)
 
