@@ -1,6 +1,6 @@
 # project
 
-Cool tutorial overall, helped a lot in understanding controllers and how API groups are developed in some capacity. 
+Cool tutorial overall, helped a lot in understanding controllers and how API groups are developed in some capacity. I verified that my controller was launching and managing my CRD instances, there are multiple API versions available (v1/v2) and you can feed in a custom config file (config/manager/controller_manager_config.yaml)
 
 
 # modifications
