@@ -23,7 +23,14 @@ I0606 11:50:20.836754   95832 request.go:665] Waited for 1.040817256s due to cli
 1.6545306210960605e+09  INFO    controller.cronjob      Starting workers        {"reconciler group": "batch.tutorial.kubebuilder.io", "reconciler kind": "CronJob", "worker count": 1}
 ```
 
-there are multiple API versions available (v1/v2) and main has been updated to accept acustom config file (config/manager/controller_manager_config.yaml)
+there are multiple API versions available (v1/v2):
+```
+austin@ubuntu:~/project$ kubectl api-resources | grep cron
+cronjobs                          cj           batch/v1                                         true         CronJob
+cronjobs                                       batch.tutorial.kubebuilder.io/v2                 true         CronJob
+```
+
+main has been updated to accept acustom config file (config/manager/controller_manager_config.yaml)
 
 
 # modifications
